@@ -1,0 +1,112 @@
+/* General styles for UserDashboard */
+.user-dashboard {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .user-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .user-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .user-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .user-card strong {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+    color: #0073e6;
+  }
+  
+  .user-social-media {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .user-social-media span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for image list with horizontal scroll */
+  .user-images {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow-x: auto;  /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory;  /* Ensures snap behavior for each image */
+    gap: 5px;
+    max-width: 100%; /* Ensures the image list doesn’t overflow parent container */
+  }
+  
+  .user-images li {
+    flex-shrink: 0;
+    width: 100px; /* Set the width for each image */
+    height: auto;
+    scroll-snap-align: start;  /* Aligns the image at the start of scroll */
+  }
+  
+  .user-images img {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    max-width: 100px;  /* Limit the image size */
+    height: auto;
+    object-fit: cover;  /* Ensures the image fits within its container */
+  }
+  
+  /* Scrollbar styling */
+  .user-images::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .user-images::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  .user-images::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .user-card {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .user-card {
+      width: 100%;
+    }
+  }
+  
