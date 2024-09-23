@@ -11,7 +11,7 @@ const UserDashboard = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('https://user-data-with-socketio-backend.vercel.app/api/admin');
+        const response = await axios.get('https://user-data-with-socketio-backend.vercel.app//api/admin');
         setUsers(response.data.users || response.data); // Adjust depending on backend response structure
       } catch (error) {
         console.error('Error fetching users:', error);
